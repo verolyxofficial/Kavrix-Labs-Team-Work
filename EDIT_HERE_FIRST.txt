@@ -1,0 +1,11 @@
+START HERE: src/config.ts
+
+Edit brand copy, services, portfolio, email/contact details, and theme colors there.
+
+IMPORTANT:
+- Social links currently point to generic platform home pages. Replace them with the real Kavrix Labs profiles before launch.
+- Phone and WhatsApp are intentionally blank until real details are supplied.
+- Verify all portfolio ownership, performance, customer, and technology claims before public launch.
+- The hero video lives in public/hero-motion.mp4 and its poster in public/hero-motion-poster.jpg.
+- Node 20.19+ is required. Node 22 is recommended via .nvmrc.
+- Run `npm ci` and `npm run qa` before pushing changes.
