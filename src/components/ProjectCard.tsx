@@ -1,8 +1,8 @@
 import { useRef, type CSSProperties, type PointerEvent as ReactPointerEvent } from "react";
-import { ArrowUpRight, Sparkles, CheckCircle2 } from "lucide-react";
-import { siteConfig } from "../config";
+import { ArrowUpRight, Sparkles, CheckCircle2, Play } from "lucide-react";
+import type { PortfolioItem } from "../config";
 
-export type ProjectItem = (typeof siteConfig.portfolio)[number];
+export type ProjectItem = PortfolioItem;
 
 interface ProjectCardProps {
   project: ProjectItem;
@@ -40,25 +40,48 @@ export default function ProjectCard({ project, index, onOpenReview }: ProjectCar
       onPointerMove={onMove}
       onPointerLeave={reset}
     >
-      <div className="project-image-wrap">
-        <img
-          src={project.image}
-          alt={project.imageAlt}
-          loading="lazy"
-          decoding="async"
-        />
+      <div className={`project-image-wrap project-media-${project.mediaType}`}>
+        {project.mediaType === "video" ? (
+          <video
+            className="project-video"
+            controls
+            preload="metadata"
+            playsInline
+            poster={project.poster}
+            aria-label={project.mediaAlt}
+          >
+            <source src={project.mediaUrl} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        ) : (
+          <img
+            src={project.mediaUrl}
+            alt={project.mediaAlt}
+            loading="lazy"
+            decoding="async"
+          />
+        )}
+
         <div className="project-shine" />
         <span className="project-index">0{index + 1}</span>
-        <a
-          className="project-credit"
-          href={project.creditUrl}
-          target="_blank"
-          rel="noreferrer"
-          title={`Visit ${project.title}`}
-        >
-          <span className="live-status-dot" />
-          <span>{project.credit}</span>
-        </a>
+
+        {project.credit && project.creditUrl ? (
+          <a
+            className="project-credit"
+            href={project.creditUrl}
+            target="_blank"
+            rel="noreferrer"
+            title={`Visit ${project.title}`}
+          >
+            <span className="live-status-dot" />
+            <span>{project.credit}</span>
+          </a>
+        ) : project.mediaType === "video" ? (
+          <span className="project-credit project-credit--static">
+            <Play size={10} />
+            <span>Video Portfolio</span>
+          </span>
+        ) : null}
       </div>
 
       <div className="project-copy">
@@ -70,7 +93,6 @@ export default function ProjectCard({ project, index, onOpenReview }: ProjectCar
         <h3>{project.title}</h3>
         <p>{project.description}</p>
 
-        {/* Highlight Tags */}
         {project.tags && project.tags.length > 0 && (
           <div className="card-tags-row">
             {project.tags.slice(0, 3).map((tag) => (
@@ -81,7 +103,6 @@ export default function ProjectCard({ project, index, onOpenReview }: ProjectCar
           </div>
         )}
 
-        {/* Key Metrics / Highlights */}
         {project.metrics && project.metrics.length > 0 && (
           <div className="card-metrics-row">
             {project.metrics.slice(0, 2).map((metric) => (
@@ -93,29 +114,42 @@ export default function ProjectCard({ project, index, onOpenReview }: ProjectCar
           </div>
         )}
 
-        {/* Dual Actions: Review Breakdown + Direct Live Link */}
-        <div className="card-action-row">
-          {onOpenReview && (
-            <button
-              type="button"
-              className="card-review-btn"
-              onClick={() => onOpenReview(project)}
-            >
-              <Sparkles size={13} />
-              <span>Review Store Breakdown</span>
-            </button>
-          )}
+        {(project.review || project.liveUrl || project.mediaType === "video") && (
+          <div className="card-action-row">
+            {project.review && onOpenReview && (
+              <button
+                type="button"
+                className="card-review-btn"
+                onClick={() => onOpenReview(project)}
+              >
+                <Sparkles size={13} />
+                <span>View Project Details</span>
+              </button>
+            )}
 
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="card-live-link"
-          >
-            <span>Visit Live</span>
-            <ArrowUpRight size={14} />
-          </a>
-        </div>
+            {project.liveUrl ? (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="card-live-link"
+              >
+                <span>Visit Live</span>
+                <ArrowUpRight size={14} />
+              </a>
+            ) : project.mediaType === "video" ? (
+              <a
+                href={project.mediaUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="card-live-link"
+              >
+                <span>Open Video</span>
+                <ArrowUpRight size={14} />
+              </a>
+            ) : null}
+          </div>
+        )}
       </div>
     </article>
   );

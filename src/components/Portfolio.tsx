@@ -3,71 +3,35 @@ import SectionIntro from "./SectionIntro";
 import ProjectCard, { type ProjectItem } from "./ProjectCard";
 import StoreReviewModal from "./StoreReviewModal";
 import { siteConfig } from "../config";
-import { Globe, Users, ShoppingBag, ShieldCheck } from "lucide-react";
 
 export default function Portfolio() {
   const [filter, setFilter] = useState("All");
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
 
-  const categories = useMemo(() => ["All", ...new Set(siteConfig.portfolio.map((item) => item.category))], []);
+  // Tabs stay in sync with the Services section automatically.
+  // Add a new service there and the portfolio gets a new working tab.
+  const categories = useMemo(
+    () => ["All", ...siteConfig.services.map((service) => service.title)],
+    [],
+  );
+
   const items = useMemo(
-    () => (filter === "All" ? siteConfig.portfolio : siteConfig.portfolio.filter((item) => item.category === filter)),
+    () =>
+      filter === "All"
+        ? siteConfig.portfolio
+        : siteConfig.portfolio.filter((item) => item.category === filter),
     [filter],
   );
 
   return (
     <section className="section section-shell" id="work">
       <SectionIntro
-        kicker="Client Work & Portfolio Review"
+        kicker="Selected Work"
         title={siteConfig.labels.portfolioTitle}
         copy={siteConfig.labels.portfolioSubtitle}
       />
 
-      {/* Portfolio Impact Metrics Bar */}
-      <div className="portfolio-stats-banner reveal" aria-label="Portfolio Track Record & Impact">
-        <div className="portfolio-stat-item">
-          <div className="stat-icon-wrap">
-            <ShoppingBag size={18} />
-          </div>
-          <div className="stat-details">
-            <span className="stat-value">7 Live Stores</span>
-            <span className="stat-label">Engineered & Scaled</span>
-          </div>
-        </div>
-
-        <div className="portfolio-stat-item">
-          <div className="stat-icon-wrap">
-            <Users size={18} />
-          </div>
-          <div className="stat-details">
-            <span className="stat-value">99+</span>
-            <span className="stat-label">Global Customers Served</span>
-          </div>
-        </div>
-
-        <div className="portfolio-stat-item">
-          <div className="stat-icon-wrap">
-            <ShieldCheck size={18} />
-          </div>
-          <div className="stat-details">
-            <span className="stat-value">Shopify Plus & DTC</span>
-            <span className="stat-label">Headless & Custom Liquid</span>
-          </div>
-        </div>
-
-        <div className="portfolio-stat-item">
-          <div className="stat-icon-wrap">
-            <Globe size={18} />
-          </div>
-          <div className="stat-details">
-            <span className="stat-value">Multi-Region Reach</span>
-            <span className="stat-label">Pakistan, US, Canada, UAE & EU</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Category Filter Pills */}
-      <div className="filter-row reveal" aria-label="Filter stores by discipline">
+      <div className="filter-row reveal" aria-label="Filter portfolio by service">
         {categories.map((category) => (
           <button
             key={category}
@@ -81,19 +45,28 @@ export default function Portfolio() {
         ))}
       </div>
 
-      {/* Projects Grid */}
-      <div className="projects-grid" aria-live="polite">
-        {items.map((project, index) => (
-          <ProjectCard
-            key={project.title}
-            project={project}
-            index={index}
-            onOpenReview={setSelectedProject}
-          />
-        ))}
-      </div>
+      {items.length > 0 ? (
+        <div className="projects-grid" aria-live="polite">
+          {items.map((project, index) => (
+            <ProjectCard
+              key={`${project.category}-${project.title}`}
+              project={project}
+              index={index}
+              onOpenReview={setSelectedProject}
+            />
+          ))}
+        </div>
+      ) : (
+        <div className="portfolio-empty reveal is-visible" aria-live="polite">
+          <span className="portfolio-empty-kicker">{filter}</span>
+          <h3>Portfolio coming soon.</h3>
+          <p>
+            This service tab is ready. Add portfolio items to <code>src/config.ts</code>
+            with the matching service category and they will appear here automatically.
+          </p>
+        </div>
+      )}
 
-      {/* Interactive Store Review & Case Study Modal */}
       <StoreReviewModal
         project={selectedProject}
         onClose={() => setSelectedProject(null)}

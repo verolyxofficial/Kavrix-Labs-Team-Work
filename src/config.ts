@@ -1,3 +1,33 @@
+export type PortfolioReview = {
+  clientGoal: string;
+  techStack: string[];
+  featuresEngineered: string[];
+  performanceImpact: string;
+  scorecard: {
+    mobileUx: string;
+    architecture: string;
+    coreWebVitals: string;
+  };
+};
+
+export type PortfolioItem = {
+  title: string;
+  category: string;
+  type: string;
+  mediaType: "image" | "video";
+  mediaUrl: string;
+  mediaAlt: string;
+  poster?: string;
+  description: string;
+  liveUrl?: string;
+  credit?: string;
+  creditUrl?: string;
+  tags?: string[];
+  metrics?: string[];
+  accentColor?: string;
+  review?: PortfolioReview;
+};
+
 export const siteConfig = {
   brand: {
     name: "Kavrix Labs",
@@ -69,7 +99,7 @@ export const siteConfig = {
       subcategories: ["Content Planning", "Publishing", "Captions", "Community", "Analytics", "Platform Management"],
     },
     {
-      title: "Web Devlopment",
+      title: "Web Development",
       description: "Responsive websites and landing pages with a strong visual layer, clean interactions, and practical performance.",
       visual: "CODE",
       className: "blue",
@@ -91,7 +121,7 @@ export const siteConfig = {
     },
     {
       title: "AI Solutions",
-      description: "Structured prospect research and list building for teams that need useful opportunities, not random spreadsheets.",
+      description: "Builds production-ready AI solutions using LLMs, Generative AI, RAG, computer vision, and multimodal AI. Specializes in AI application development, dataset engineering, local AI systems, API integration, and open-source AI projects.",
       visual: "AI",
       className: "white",
       subcategories: ["AI Engineering", "Generative AI & LLM Solutions", "RAG & Knowledge Systems", "Computer Vision & Multimodal AI", "AI Data & Dataset Engineering", "Local & On-Device AI", "AI Application Development", "AI Integration & Deployment", "Open-Source AI Systems"],
@@ -111,16 +141,19 @@ export const siteConfig = {
       subcategories: ["Shopify Management", "Ebay Management","Amazon Management", "Product Listings", "Catalog Cleanup", "Store Content", "Customer Support", "Optimization"],
     },
   ],
+  // Portfolio is data-driven. To add work later, add one object here with a category
+  // matching a service title above. Use mediaType "image" or "video"; no component changes needed.
   portfolio: [
     {
       title: "Comfrt",
-      category: "Apparel & DTC",
-      type: "Live Production Flagship",
+      category: "Web Development",
+      type: "Web Development Project",
       liveUrl: "https://comfrt.com",
       description:
         "Feel-good weighted hoodies, plush blankets, and anxiety-relief loungewear engineered on Shopify Plus with headless Bento & Outsmartly acceleration for sub-second page loads.",
-      image: "https://cdn.shopify.com/s/files/1/0569/4029/8284/files/WEB_LINK_1.jpg?v=1783966011",
-      imageAlt: "Comfrt apparel and feel-good weighted clothing flagship store",
+      mediaType: "image",
+      mediaUrl: "https://cdn.shopify.com/s/files/1/0569/4029/8284/files/WEB_LINK_1.jpg?v=1783966011",
+      mediaAlt: "Comfrt apparel and feel-good weighted clothing flagship store",
       credit: "comfrt.com · Live Store",
       creditUrl: "https://comfrt.com",
       tags: ["Shopify Plus", "Headless Bento", "Custom PDP Swatches", "Rebuy Upsells"],
@@ -141,13 +174,14 @@ export const siteConfig = {
     },
     {
       title: "PurelyWHITE DELUXE™",
-      category: "Oral Care & Beauty",
-      type: "Live Production Flagship",
+      category: "Web Development",
+      type: "Web Development Project",
       liveUrl: "https://purelywhitedeluxe.com",
       description:
         "Award-winning dentist-formulated teeth whitening brand serving over 1 million customers, featuring custom bundle builders, video testimonials, and high-converting checkouts.",
-      image: "https://purelywhitedeluxe.com/cdn/shop/files/Untitled_design_1.png?v=1691467284",
-      imageAlt: "PurelyWHITE DELUXE award-winning teeth whitening oral care store",
+      mediaType: "image",
+      mediaUrl: "https://purelywhitedeluxe.com/cdn/shop/files/Untitled_design_1.png?v=1691467284",
+      mediaAlt: "PurelyWHITE DELUXE award-winning teeth whitening oral care store",
       credit: "purelywhitedeluxe.com · Live Store",
       creditUrl: "https://purelywhitedeluxe.com",
       tags: ["DTC Oral Care", "Bundle Builder", "TriplePixel", "Afterpay / Shop Pay"],
@@ -168,13 +202,14 @@ export const siteConfig = {
     },
     {
       title: "Atelier RMR Montreal",
-      category: "Luxury Fine Jewellery",
-      type: "Live Production Flagship",
+      category: "Web Development",
+      type: "Web Development Project",
       liveUrl: "https://atelierrmr.com/",
       description:
         "Montreal's artisanal custom jewellery workshop since 1978, featuring a bespoke bilingual (EN/FR) experience, custom ring showcase, Swiper galleries, and CAD/USD checkout.",
-      image: "https://atelierrmr.com/cdn/shop/files/Atelier_RMR_Montreal.jpg?v=1699632346",
-      imageAlt: "Atelier RMR Montreal artisanal custom fine jewellery digital flagship",
+      mediaType: "image",
+      mediaUrl: "https://atelierrmr.com/cdn/shop/files/Atelier_RMR_Montreal.jpg?v=1699632346",
+      mediaAlt: "Atelier RMR Montreal artisanal custom fine jewellery digital flagship",
       credit: "atelierrmr.com · Live Store",
       creditUrl: "https://atelierrmr.com/",
       tags: ["Luxury Jewellery", "Bilingual EN/FR", "Swiper Galleries", "Multi-Currency CAD/USD"],
@@ -195,13 +230,14 @@ export const siteConfig = {
     },
     {
       title: "SEVEN:THIRTY SKINCARE",
-      category: "Clean Skincare",
-      type: "Live Production Flagship",
+      category: "Web Development",
+      type: "Web Development Project",
       liveUrl: "https://seventhirty.co",
       description:
         "Professional facial products and intentionally formulated skincare solutions with modern View Transitions, ingredient breakdown drawers, and sleek mobile UX.",
-      image: "https://seventhirty.co/cdn/shop/files/730-thumbnail.jpg?v=1677616405",
-      imageAlt: "SEVEN:THIRTY SKINCARE professional facial products and clean beauty storefront",
+      mediaType: "image",
+      mediaUrl: "https://seventhirty.co/cdn/shop/files/730-thumbnail.jpg?v=1677616405",
+      mediaAlt: "SEVEN:THIRTY SKINCARE professional facial products and clean beauty storefront",
       credit: "seventhirty.co · Live Store",
       creditUrl: "https://seventhirty.co",
       tags: ["Clean Beauty", "View Transitions API", "Ingredient Transparency", "Mobile-First"],
@@ -222,13 +258,14 @@ export const siteConfig = {
     },
     {
       title: "FAJ Trading L.L.C",
-      category: "Commercial Equipment & B2B",
-      type: "Live Production Flagship",
+      category: "Web Development",
+      type: "Web Development Project",
       liveUrl: "https://fajtradingllc.com",
       description:
         "Large-scale commercial marketplace and equipment supplier in Dubai, UAE & MENA for coffee machines, electronics, refrigeration, ACs, and electrical analyzers.",
-      image: "https://www.fajtradingllc.com/cdn/shop/files/Faj_Trading_llc_Logo_1000_x_500.png?v=1766221725",
-      imageAlt: "FAJ Trading L.L.C Dubai commercial equipment and coffee machines supplier",
+      mediaType: "image",
+      mediaUrl: "https://www.fajtradingllc.com/cdn/shop/files/Faj_Trading_llc_Logo_1000_x_500.png?v=1766221725",
+      mediaAlt: "FAJ Trading L.L.C Dubai commercial equipment and coffee machines supplier",
       credit: "fajtradingllc.com · Live Store",
       creditUrl: "https://fajtradingllc.com",
       tags: ["B2B / B2C Commerce", "Dubai & MENA Region", "Mega-Menu Catalog", "Equipment Wholesale"],
@@ -249,13 +286,14 @@ export const siteConfig = {
     },
     {
       title: "Kawaii Slime Company",
-      category: "Toys & Sensory Play",
-      type: "Live Production Flagship",
+      category: "Web Development",
+      type: "Web Development Project",
       liveUrl: "https://www.kawaiislimecompany.com/",
       description:
         "Viral sensory toys, custom DIY slime supplies, and creative kits engineered with interactive free gift unlock gates, pastel branding, and subscription bundles.",
-      image: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&fm=jpg&q=82&w=1600",
-      imageAlt: "Kawaii Slime Company sensory toys and creative DIY slime products",
+      mediaType: "image",
+      mediaUrl: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&fm=jpg&q=82&w=1600",
+      mediaAlt: "Kawaii Slime Company sensory toys and creative DIY slime products",
       credit: "kawaiislimecompany.com · Live Store",
       creditUrl: "https://www.kawaiislimecompany.com/",
       tags: ["Gamified E-Commerce", "Free Gift Gate JS", "Sensory Swatches", "Quicksand/Nunito UI"],
@@ -276,13 +314,14 @@ export const siteConfig = {
     },
     {
       title: "Directory Mockups",
-      category: "Digital Products & Tools",
-      type: "Live Production Flagship",
+      category: "Web Development",
+      type: "Web Development Project",
       liveUrl: "https://mockups.directory/",
       description:
         "Curated high-quality PSD mockups of digital devices, stationery, and packaging with instant digital delivery and automated EU/UK VAT compliance via Sufio.",
-      image: "https://mockups.directory/cdn/shop/files/DirectorySocial.jpg?v=1676207078",
-      imageAlt: "Directory Mockups premium digital PSD resources and device mockups",
+      mediaType: "image",
+      mediaUrl: "https://mockups.directory/cdn/shop/files/DirectorySocial.jpg?v=1676207078",
+      mediaAlt: "Directory Mockups premium digital PSD resources and device mockups",
       credit: "mockups.directory · Live Store",
       creditUrl: "https://mockups.directory/",
       tags: ["Digital Downloads", "Sufio VAT Automation", "High-Resolution PSDs", "Minimalist Grid"],
@@ -301,12 +340,64 @@ export const siteConfig = {
         scorecard: { mobileUx: "99%", architecture: "Automated Digital Pipeline", coreWebVitals: "Instant" },
       },
     },
+    {
+      title: "Real Estate Video — Essential Shots",
+      category: "Video Editing",
+      type: "Video Editing Portfolio",
+      mediaType: "video",
+      mediaUrl: "/Video%20editing/3%20Essential%20Shots%20For%20Real%20Estate%20Video.mp4",
+      poster: "/portfolio-posters/real-estate-essential-shots.jpg",
+      mediaAlt: "Real estate video editing sample showing essential shots",
+      description: "Real estate video editing sample focused on clean pacing, shot selection, and polished presentation.",
+      tags: ["Real Estate", "Editing", "Storytelling"],
+      metrics: ["Video Portfolio", "MP4"],
+      accentColor: "#a783ff",
+    },
+    {
+      title: "After Effects — Real Estate Video",
+      category: "Video Editing",
+      type: "Video Editing Portfolio",
+      mediaType: "video",
+      mediaUrl: "/Video%20editing/After%20Effects%20for%20Real%20Estate%20Videos.mp4",
+      poster: "/portfolio-posters/after-effects-real-estate.jpg",
+      mediaAlt: "After Effects real estate video editing sample",
+      description: "Real estate editing sample featuring refined pacing, visual polish, and After Effects finishing.",
+      tags: ["After Effects", "Real Estate", "Post Production"],
+      metrics: ["Video Portfolio", "MP4"],
+      accentColor: "#5ce7ff",
+    },
+    {
+      title: "Viral Reels in After Effects",
+      category: "Motion Graphics",
+      type: "Motion Graphics Portfolio",
+      mediaType: "video",
+      mediaUrl: "/motion%20graphics/Edit%20viral%20reels%20in%20After%20Effects.mp4",
+      poster: "/portfolio-posters/viral-reels-after-effects.jpg",
+      mediaAlt: "Motion graphics sample for viral reels created in After Effects",
+      description: "Motion graphics sample built for short-form content with animated elements, timing, and visual energy.",
+      tags: ["After Effects", "Reels", "Motion Graphics"],
+      metrics: ["Motion Portfolio", "MP4"],
+      accentColor: "#b8ff3d",
+    },
+    {
+      title: "Combo of Two Reels",
+      category: "Motion Graphics",
+      type: "Motion Graphics Portfolio",
+      mediaType: "video",
+      mediaUrl: "/motion%20graphics/Combo%20of%20two%20reels.mp4",
+      poster: "/portfolio-posters/combo-reels.jpg",
+      mediaAlt: "Combined motion graphics reel portfolio sample",
+      description: "A combined motion reel showcasing energetic transitions, animated graphics, and short-form visual treatment.",
+      tags: ["Reels", "Animation", "Motion Design"],
+      metrics: ["Motion Portfolio", "MP4"],
+      accentColor: "#ff75c6",
+    },
   ],
   labels: {
     primaryCta: "Start a project",
     secondaryCta: "Explore the work",
-    portfolioTitle: "Selected Client Stores & Digital Flagships.",
-    portfolioSubtitle: "Real production stores engineered for high-volume DTC brands, bespoke luxury jewelers, international B2B distributors, and digital resource creators.",
+    portfolioTitle: "Selected Work Across Our Services.",
+    portfolioSubtitle: "Explore our work by service. More projects, videos, and case studies can be added to the portfolio data without changing the layout.",
     contactTitle: "Bring us the complicated bit.",
     contactSubtitle: "Start with an email. The rest can be sorted out like civilized people after that.",
     footerText: "Creative production · Digital design · Front-end experiences",

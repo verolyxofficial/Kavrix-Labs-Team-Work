@@ -6,6 +6,10 @@ IMPORTANT:
 - Social links currently point to generic platform home pages. Replace them with the real Kavrix Labs profiles before launch.
 - Phone and WhatsApp are intentionally blank until real details are supplied.
 - Verify all portfolio ownership, performance, customer, and technology claims before public launch.
+- Portfolio tabs are generated from the services list. Existing store work is categorized under `Web Development`.
+- Portfolio videos use `mediaType: "video"` and point to files in `public/`; the current Video Editing and Motion Graphics samples are already wired in.
+- To add future portfolio work, add one object to `siteConfig.portfolio` in `src/config.ts` with a `category` matching a service title. Use `mediaType: "image"` or `"video"` and set `mediaUrl`; no portfolio component changes are required.
+- Empty service tabs are intentional and will automatically show new work as soon as you add matching portfolio entries.
 - The hero video lives in public/hero-motion.mp4 and its poster in public/hero-motion-poster.jpg.
 - Node 20.19+ is required. Node 22 is recommended via .nvmrc.
 - Run `npm ci` and `npm run qa` before pushing changes.

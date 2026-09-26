@@ -1,8 +1,18 @@
 import { useEffect } from "react";
-import { X, ExternalLink, Check, Layers, Cpu, TrendingUp, Sparkles, Smartphone, ShieldCheck } from "lucide-react";
-import { siteConfig } from "../config";
+import {
+  X,
+  ExternalLink,
+  Check,
+  Layers,
+  Cpu,
+  TrendingUp,
+  Sparkles,
+  Smartphone,
+  ShieldCheck,
+} from "lucide-react";
+import type { PortfolioItem } from "../config";
 
-export type ProjectItem = (typeof siteConfig.portfolio)[number];
+export type ProjectItem = PortfolioItem;
 
 interface StoreReviewModalProps {
   project: ProjectItem | null;
@@ -12,36 +22,36 @@ interface StoreReviewModalProps {
 export default function StoreReviewModal({ project, onClose }: StoreReviewModalProps) {
   useEffect(() => {
     if (!project) return;
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
+
     document.body.style.overflow = "hidden";
     window.addEventListener("keydown", handleKeyDown);
+
     return () => {
       document.body.style.overflow = "";
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [project, onClose]);
 
-  if (!project) return null;
+  if (!project?.review) return null;
 
-  const { review, scorecard } = {
-    review: project.review,
-    scorecard: project.review?.scorecard ?? { mobileUx: "98%", architecture: "Production", coreWebVitals: "Optimized" },
-  };
+  const review = project.review;
+  const scorecard = review.scorecard;
 
   return (
     <div
       className="store-modal-backdrop"
       role="dialog"
       aria-modal="true"
-      aria-labelledby="store-modal-title"
+      aria-labelledby="project-modal-title"
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();
       }}
     >
       <div className="store-modal-container">
-        {/* Header */}
         <div className="store-modal-header">
           <div className="store-modal-brand-badge">
             <span className="live-status-dot" />
@@ -51,37 +61,54 @@ export default function StoreReviewModal({ project, onClose }: StoreReviewModalP
             type="button"
             className="store-modal-close"
             onClick={onClose}
-            aria-label="Close store review"
+            aria-label="Close project details"
           >
             <X size={20} />
           </button>
         </div>
 
-        {/* Hero Banner in Modal */}
         <div className="store-modal-hero">
           <div className="store-modal-image-wrap">
-            <img src={project.image} alt={project.imageAlt} />
+            {project.mediaType === "video" ? (
+              <video
+                className="store-modal-media"
+                controls
+                playsInline
+                preload="metadata"
+                poster={project.poster}
+                aria-label={project.mediaAlt}
+              >
+                <source src={project.mediaUrl} type="video/mp4" />
+              </video>
+            ) : (
+              <img src={project.mediaUrl} alt={project.mediaAlt} />
+            )}
             <div className="store-modal-image-overlay" />
           </div>
+
           <div className="store-modal-title-group">
-            <h2 id="store-modal-title">{project.title}</h2>
+            <h2 id="project-modal-title">{project.title}</h2>
             <p className="store-modal-desc">{project.description}</p>
-            <div className="store-modal-actions">
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="button button--primary store-live-link"
-              >
-                <span>Visit Live Flagship</span>
-                <ExternalLink size={16} />
-              </a>
-              <span className="store-url-label">{project.credit}</span>
-            </div>
+
+            {project.liveUrl && (
+              <div className="store-modal-actions">
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="button button--primary store-live-link"
+                >
+                  <span>Visit Live Project</span>
+                  <ExternalLink size={16} />
+                </a>
+                {project.credit && (
+                  <span className="store-url-label">{project.credit}</span>
+                )}
+              </div>
+            )}
           </div>
         </div>
 
-        {/* Performance & Quality Scorecard */}
         <div className="store-scorecard">
           <div className="scorecard-item">
             <Smartphone size={16} className="scorecard-icon" />
@@ -90,6 +117,7 @@ export default function StoreReviewModal({ project, onClose }: StoreReviewModalP
               <strong className="scorecard-value">{scorecard.mobileUx}</strong>
             </div>
           </div>
+
           <div className="scorecard-item">
             <Cpu size={16} className="scorecard-icon" />
             <div>
@@ -97,6 +125,7 @@ export default function StoreReviewModal({ project, onClose }: StoreReviewModalP
               <strong className="scorecard-value">{scorecard.architecture}</strong>
             </div>
           </div>
+
           <div className="scorecard-item">
             <ShieldCheck size={16} className="scorecard-icon" />
             <div>
@@ -106,9 +135,7 @@ export default function StoreReviewModal({ project, onClose }: StoreReviewModalP
           </div>
         </div>
 
-        {/* Detailed Review Content */}
         <div className="store-review-body">
-          {/* Client Challenge / Objective */}
           <div className="review-section">
             <div className="review-section-heading">
               <Sparkles size={16} />
@@ -117,7 +144,6 @@ export default function StoreReviewModal({ project, onClose }: StoreReviewModalP
             <p className="review-text">{review.clientGoal}</p>
           </div>
 
-          {/* Tech Stack Matrix */}
           <div className="review-section">
             <div className="review-section-heading">
               <Layers size={16} />
@@ -132,7 +158,6 @@ export default function StoreReviewModal({ project, onClose }: StoreReviewModalP
             </div>
           </div>
 
-          {/* Key Features Engineered */}
           <div className="review-section">
             <div className="review-section-heading">
               <Cpu size={16} />
@@ -150,29 +175,30 @@ export default function StoreReviewModal({ project, onClose }: StoreReviewModalP
             </ul>
           </div>
 
-          {/* Conversion & Business Impact */}
           <div className="review-section review-impact-box">
             <div className="review-section-heading">
               <TrendingUp size={16} />
-              <h3>Results & Conversion Impact</h3>
+              <h3>Results & Impact</h3>
             </div>
             <p className="review-text">{review.performanceImpact}</p>
           </div>
         </div>
 
-        {/* Modal Footer */}
         <div className="store-modal-footer">
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="button button--primary"
-          >
-            <span>Explore {project.title} Live</span>
-            <ExternalLink size={16} />
-          </a>
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="button button--primary"
+            >
+              <span>Explore {project.title} Live</span>
+              <ExternalLink size={16} />
+            </a>
+          )}
+
           <button type="button" className="button button--ghost" onClick={onClose}>
-            Back to All Stores
+            Back to Portfolio
           </button>
         </div>
       </div>
