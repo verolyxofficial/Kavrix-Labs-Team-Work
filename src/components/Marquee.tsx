@@ -1,5 +1,5 @@
 export default function Marquee() {
-  const words = ["VIDEO", "MOTION", "BRAND", "UI/UX", "SOCIAL", "FRONT-END", "EMAIL", "E-COMMERCE"];
+  const words = ["VIDEO", "MOTION", "BRAND", "UI/UX", "SOCIAL", "WEB DEVELOPMENT", "AI SOLUTIONS", "EMAIL", "E-COMMERCE"];
   const repeated = [...words, ...words];
   return (
     <div className="marquee" aria-hidden="true">

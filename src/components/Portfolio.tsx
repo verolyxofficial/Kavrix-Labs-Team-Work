@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import SectionIntro from "./SectionIntro";
 import ProjectCard, { type ProjectItem } from "./ProjectCard";
 import StoreReviewModal from "./StoreReviewModal";
@@ -8,7 +8,6 @@ import { Globe, Users, ShoppingBag, ShieldCheck } from "lucide-react";
 export default function Portfolio() {
   const [filter, setFilter] = useState("All");
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
-  const closeModal = useCallback(() => setSelectedProject(null), []);
 
   const categories = useMemo(() => ["All", ...new Set(siteConfig.portfolio.map((item) => item.category))], []);
   const items = useMemo(
@@ -41,7 +40,7 @@ export default function Portfolio() {
             <Users size={18} />
           </div>
           <div className="stat-details">
-            <span className="stat-value">1,000,000+</span>
+            <span className="stat-value">99+</span>
             <span className="stat-label">Global Customers Served</span>
           </div>
         </div>
@@ -62,7 +61,7 @@ export default function Portfolio() {
           </div>
           <div className="stat-details">
             <span className="stat-value">Multi-Region Reach</span>
-            <span className="stat-label">US, Canada, UAE & EU</span>
+            <span className="stat-label">Pakistan, US, Canada, UAE & EU</span>
           </div>
         </div>
       </div>
@@ -97,7 +96,7 @@ export default function Portfolio() {
       {/* Interactive Store Review & Case Study Modal */}
       <StoreReviewModal
         project={selectedProject}
-        onClose={closeModal}
+        onClose={() => setSelectedProject(null)}
       />
     </section>
   );

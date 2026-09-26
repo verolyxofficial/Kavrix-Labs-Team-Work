@@ -12,7 +12,6 @@ body { margin: 0; min-width: 320px; min-height: 100vh; background: #08090d; colo
 button, a { -webkit-tap-highlight-color: transparent; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; }
-a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--accent, #b8ff3d); outline-offset: 3px; }
 img { display: block; max-width: 100%; }
 ::selection { background: #b8ff3d; color: #08090d; }
 

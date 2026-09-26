@@ -2,7 +2,6 @@ import { useRef, useState } from "react";
 import { Pause, Play, Volume2, VolumeX } from "lucide-react";
 
 export default function HeroMedia() {
-  const publicAsset = (name: string) => `${import.meta.env.BASE_URL}${name}`;
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(true);
   const [muted, setMuted] = useState(true);
@@ -37,8 +36,8 @@ export default function HeroMedia() {
         <video
           ref={videoRef}
           className="hero-video"
-          src={publicAsset("hero-motion.mp4")}
-          poster={publicAsset("hero-motion-poster.jpg")}
+          src="/hero-motion.mp4"
+          poster="/hero-motion-poster.jpg"
           autoPlay
           muted
           loop

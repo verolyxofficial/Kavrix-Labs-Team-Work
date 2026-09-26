@@ -38,13 +38,12 @@ export default function ServiceCard({ service, index }: { service: (typeof siteC
         <span>{open ? "Hide capabilities" : "View capabilities"}</span>
         <ChevronDown className={open ? "rotated" : ""} />
       </button>
-      <div id={panelId} className={`service-panel ${open ? "is-open" : ""}`} aria-hidden={!open}>
+      <div id={panelId} className={`service-panel ${open ? "is-open" : ""}`}>
         <div>
           {service.subcategories.map((item) => (
             <a
               key={item}
               href={`mailto:${siteConfig.contact.email}?subject=${encodeURIComponent(`Project inquiry: ${item}`)}&body=${encodeURIComponent(`Hi ${siteConfig.brand.name}, I would like to discuss ${item}.`)}`}
-              tabIndex={open ? 0 : -1}
             >
               {item}<ArrowUpRight />
             </a>
