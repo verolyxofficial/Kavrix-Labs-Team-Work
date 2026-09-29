@@ -1,7 +1,8 @@
+
 export type PortfolioReview = {
   clientGoal: string;
-  techStack: string[];
-  featuresEngineered: string[];
+  techStack: readonly string[];
+  featuresEngineered: readonly string[];
   performanceImpact: string;
   scorecard: {
     mobileUx: string;
@@ -10,23 +11,22 @@ export type PortfolioReview = {
   };
 };
 
-export type PortfolioItem = {
+export interface PortfolioItem {
   title: string;
   category: string;
   type: string;
-  mediaType: "image" | "video";
-  mediaUrl: string;
-  mediaAlt: string;
-  poster?: string;
-  description: string;
   liveUrl?: string;
+  mediaType?: "image" | "video";
+  mediaUrl?: string;
+  poster?: string;
+  mediaAlt?: string;
+  description: string;
+  tags?: readonly string[];
+  metrics?: readonly string[];
+  review?: PortfolioReview;
   credit?: string;
   creditUrl?: string;
-  tags?: string[];
-  metrics?: string[];
-  accentColor?: string;
-  review?: PortfolioReview;
-};
+}
 
 export const siteConfig = {
   brand: {
