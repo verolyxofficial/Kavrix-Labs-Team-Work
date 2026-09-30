@@ -29,8 +29,7 @@ export default function Header() {
   return (
     <header className="site-header">
       <a className="brand" href="#top" aria-label={`${siteConfig.brand.name} home`} onClick={() => setOpen(false)}>
-        <BrandMark compact />
-        <span>{siteConfig.brand.name}</span>
+        <img src="/kavrix-logo.jpg" alt={siteConfig.brand.name} className="site-brand-logo" />
       </a>
       <nav id="primary-navigation" className={`nav ${open ? "is-open" : ""}`} aria-label="Primary navigation">
         {nav.map(([label, href]) => (

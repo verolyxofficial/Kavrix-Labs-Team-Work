@@ -1,5 +1,5 @@
 import { useState, type CSSProperties } from "react";
-import { ArrowUpRight, ChevronDown, Sparkles, Video, Palette, LayoutGrid, Share2, Code2, Mail, Users, Headphones, ShoppingBag } from "lucide-react";
+import { ArrowUpRight, ChevronDown, Sparkles, Video, Palette, LayoutGrid, Share2, Code2, Mail, Users, Headphones, ShoppingBag, TrendingUp, Search, Bot } from "lucide-react";
 import { siteConfig } from "../config";
 
 const ICONS: Record<string, typeof Video> = {
@@ -8,6 +8,9 @@ const ICONS: Record<string, typeof Video> = {
   DESIGN: Palette,
   "UI/UX": LayoutGrid,
   SOCIAL: Share2,
+  MARKETING: TrendingUp,
+  SEO: Search,
+  AI: Bot,
   CODE: Code2,
   EMAIL: Mail,
   LEADS: Users,
@@ -21,7 +24,7 @@ export default function ServiceCard({ service, index }: { service: (typeof siteC
   const panelId = `service-panel-${index}`;
 
   return (
-    <article className={`service-card reveal tone-${service.className}`} style={{ "--delay": `${(index % 4) * 70}ms` } as CSSProperties}>
+    <article className={`service-card tone-${service.className}`}>
       <div className="service-topline">
         <span>{String(index + 1).padStart(2, "0")}</span>
         <div className="service-icon"><Icon /></div>

@@ -35,7 +35,7 @@ export default function ProjectCard({ project, index, onOpenReview }: ProjectCar
   return (
     <article
       ref={ref}
-      className="project-card reveal is-visible"
+      className="project-card"
       style={{ "--delay": `${(index % 4) * 60}ms` } as CSSProperties}
       onPointerMove={onMove}
       onPointerLeave={reset}

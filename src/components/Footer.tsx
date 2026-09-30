@@ -7,8 +7,8 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="footer-inner section-shell">
         <div className="footer-brand">
-          <BrandMark />
-          <div><strong>{siteConfig.brand.name}</strong><span>{siteConfig.labels.footerText}</span></div>
+          <img src="/kavrix-logo.jpg" alt={siteConfig.brand.name} className="footer-brand-logo" />
+          {/* <div><span>{siteConfig.labels.footerText}</span></div> */}
         </div>
         <div className="footer-nav">
           <a href="#services">Services</a><a href="#work">Work</a><a href="#about">Approach</a><a href="#contact">Contact</a>

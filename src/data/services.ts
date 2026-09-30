@@ -1,0 +1,88 @@
+import type { ServiceItem } from "./types";
+
+export const services: readonly ServiceItem[] = [
+  {
+    title: "Video Editing",
+    description: "Fast, polished edits built around retention, rhythm, story, and platform-specific delivery.",
+    visual: "VIDEO",
+    className: "violet",
+    subcategories: ["YouTube Editing", "Short-form & Reels", "Podcast Editing", "Product Videos", "Color & Audio Polish", "Captions & Repurposing"],
+  },
+  {
+    title: "Motion Graphics",
+    description: "Motion systems, animated identities, explainers, titles, and visual effects that add energy without adding noise.",
+    visual: "MOTION",
+    className: "cyan",
+    subcategories: ["2D Motion", "3D Motion", "Logo Animation", "Kinetic Type", "Explainers", "VFX & Titles"],
+  },
+  {
+    title: "Graphic Designing",
+    description: "Brand-ready visual systems for campaigns, social, presentations, print, and digital communication.",
+    visual: "DESIGN",
+    className: "orange",
+    subcategories: ["Brand Identity", "Social Creatives", "Thumbnails", "Pitch Decks", "Packaging", "Campaign Design"],
+  },
+  {
+    title: "UI/UX Design",
+    description: "Clear interface design shaped around hierarchy, interaction, usability, and responsive behavior.",
+    visual: "UI/UX",
+    className: "lime",
+    subcategories: ["Web UI", "Mobile UI", "Dashboards", "Wireframes", "Prototypes", "Design Systems"],
+  },
+  {
+    title: "Digital Marketing",
+    description: "Performance campaigns, social growth, content strategy, and multi-channel marketing designed to acquire, engage, and convert high-value customers.",
+    visual: "MARKETING",
+    className: "pink",
+    subcategories: ["Social Media Marketing", "Content Strategy", "Performance Ads & PPC", "Growth Marketing", "Campaign Management", "Analytics & CRO"],
+  },
+  {
+    title: "SEO",
+    description: "Technical SEO, search architecture, keyword dominance, and high-authority link strategies that rank your brand at the top of organic search.",
+    visual: "SEO",
+    className: "amber",
+    subcategories: ["Technical SEO", "On-Page Optimization", "Keyword Strategy", "Content Architecture", "Link Building", "Local SEO", "Speed & Core Web Vitals"],
+  },
+  {
+    title: "Web Development",
+    description: "Responsive websites and landing pages with a strong visual layer, clean interactions, and practical performance.",
+    visual: "CODE",
+    className: "blue",
+    subcategories: ["React Websites", "Landing Pages", "Responsive UI", "E-commerce UI", "Redesigns", "Performance Polish"],
+  },
+  {
+    title: "Email Marketing",
+    description: "Campaign design, newsletters, automations, and lifecycle communication that feels intentional rather than spammy.",
+    visual: "EMAIL",
+    className: "gold",
+    subcategories: ["Campaigns", "Newsletters", "Templates", "Automation", "Segmentation", "Reporting"],
+  },
+  {
+    title: "Lead Generation",
+    description: "Structured prospect research and list building for teams that need useful opportunities, not random spreadsheets.",
+    visual: "LEADS",
+    className: "teal",
+    subcategories: ["B2B Research", "B2C Research", "Internet Research", "LinkedIn Leads", "Email Leads", "Verification", "CRM Support"],
+  },
+  {
+    title: "AI Solutions",
+    description: "Builds production-ready AI solutions using LLMs, Generative AI, RAG, computer vision, and multimodal AI. Specializes in AI application development, dataset engineering, local AI systems, API integration, and open-source AI projects.",
+    visual: "AI",
+    className: "white",
+    subcategories: ["AI Engineering", "Generative AI & LLM Solutions", "RAG & Knowledge Systems", "Computer Vision & Multimodal AI", "AI Data & Dataset Engineering", "Local & On-Device AI", "AI Application Development", "AI Integration & Deployment", "Open-Source AI Systems"],
+  },
+  {
+    title: "Virtual Assistant",
+    description: "Flexible operational support for the repetitive work that still needs to be done properly.",
+    visual: "VA",
+    className: "indigo",
+    subcategories: ["Admin Support", "Research", "Emails", "Calendar", "CRM", "Data & Documents", "Customer Support"],
+  },
+  {
+    title: "E-commerce",
+    description: "Store support across product content, catalog operations, customer workflows, and front-end presentation.",
+    visual: "SHOP",
+    className: "emerald",
+    subcategories: ["Shopify Management", "Ebay Management", "Amazon Management", "Product Listings", "Catalog Cleanup", "Store Content", "Customer Support", "Optimization"],
+  },
+] as const;

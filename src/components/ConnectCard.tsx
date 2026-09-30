@@ -5,7 +5,7 @@ export default function ConnectCard() {
   const methods = getConnectMethods();
 
   return (
-    <article className="connect-project-card reveal" aria-label="Connect with Kavrix Labs">
+    <article className="connect-project-card" aria-label="Connect with Kavrix Labs">
       <div className="connect-project-copy">
         <div className="project-meta"><span>Connect</span><span>Direct links</span></div>
         <h3>Find Kavrix wherever you already spend your screen time.</h3>
