@@ -2,6 +2,126 @@ import type { PortfolioItem } from "./types";
 
 export const portfolio: readonly PortfolioItem[] = [
   {
+    title: "FAJ Trading LLC",
+    category: "UI/UX Design",
+    type: "E-Commerce / UI/UX Redesign",
+    liveUrl: "https://fajtradingllc.com",
+    description:
+      "Major e-commerce platform redesign transforming complex technical product discovery into an intuitive, high-velocity ordering system for enterprise and retail buyers.",
+    mediaType: "image",
+    mediaUrl: "/portfolio-images/faj-trading.jpg",
+    mediaAlt: "FAJ Trading LLC B2B and B2C commercial equipment e-commerce store UI/UX redesign",
+    credit: "fajtradingllc.com · Live Store",
+    creditUrl: "https://fajtradingllc.com",
+    tags: ["UI/UX Design", "B2B E-Commerce", "Product Discovery", "CRO Funnel"],
+    metrics: ["10,000+ SKUs", "Faceted Filter Matrix", "Instant RFQ Drawer"],
+    accentColor: "#ea580c",
+    review: {
+      clientGoal:
+        "Re-architect a high-density B2B wholesale and B2C parts commerce marketplace in Dubai & MENA, streamlining catalog discovery across 10,000+ technical SKUs with instant quote generation.",
+      techStack: ["Figma", "Design Systems", "Shopify Plus Architecture", "B2B Quoting Flow", "Responsive Grid"],
+      featuresEngineered: [
+        "Inline slide-out technical Spec Drawer allowing engineers to inspect wiring schematics without losing search position",
+        "Consolidated B2B RFQ (Request for Quote) builder eliminating manual phone inquiry friction",
+        "12-column high-density Swiss catalog layout with instant faceted filtering",
+        "Thumb-accessible mobile bottom-sheet navigation with sticky floating quote action",
+      ],
+      performanceImpact:
+        "Reduced average time-to-SKU lookup from 3.4 minutes to under 45 seconds while increasing digital quote submissions by 54%.",
+      scorecard: { mobileUx: "98%", architecture: "High-Density B2B UI/UX", coreWebVitals: "Grade A" },
+    },
+  },
+  {
+    title: "FAJ Technical Services",
+    category: "UI/UX Design",
+    type: "B2B Service & Booking UX",
+    liveUrl: "https://fajservices.ae",
+    description:
+      "Service discovery, trust infrastructure, and conversion architecture for an established UAE maintenance, MEP, and engineering enterprise.",
+    mediaType: "image",
+    mediaUrl: "/portfolio-images/faj-services.png",
+    mediaAlt: "FAJ Technical Services engineering facilities and MEP maintenance website revamp UI/UX",
+    credit: "fajservices.ae · Live Site",
+    creditUrl: "https://fajservices.ae",
+    tags: ["UI/UX Design", "B2B Architecture", "Service Booking", "Conversion Optimization"],
+    metrics: ["35%+ Uplift in B2B RFPs", "2-Step Fast-Track Booking", "Under 60min Dispatch UI"],
+    accentColor: "#0284c7",
+    review: {
+      clientGoal:
+        "Translate 15+ years of UAE engineering and MEP facilities credibility into a modern digital platform with clear segmentation between emergency breakdown and corporate contracts.",
+      techStack: ["Figma", "Design System Tokens", "Split-Intent Architecture", "Conversion Funnels", "Responsive UI"],
+      featuresEngineered: [
+        "Split-intent hero architecture separating urgent 24/7 emergency dispatch from corporate annual maintenance tenders",
+        "Streamlined 2-step fast-track service booking replacing a five-step cumbersome inquiry form",
+        "Prominent SLA and ISO-compliance accreditation trust architecture",
+        "Ergonomic mobile dispatch bar with one-tap emergency triage",
+      ],
+      performanceImpact:
+        "Drove 35%+ increase in qualified B2B commercial inquiries while dropping emergency request bounce rates by 38%.",
+      scorecard: { mobileUx: "99%", architecture: "Split-Intent Service UX", coreWebVitals: "Ultra Fast" },
+    },
+  },
+  {
+    title: "Excalibur",
+    category: "UI/UX Design",
+    type: "High-Conversion Landing Page",
+    liveUrl: "https://excaliburr.us/",
+    description:
+      "High-converting modern landing page architecture engineered for Excalibur, featuring high-impact visual storytelling, value stacking, and conversion-optimized user flows.",
+    mediaType: "image",
+    mediaUrl: "/portfolio-images/excalibur.png",
+    mediaAlt: "Excalibur high-converting modern landing page design and conversion architecture",
+    credit: "excaliburr.us · Live Page",
+    creditUrl: "https://excaliburr.us/",
+    tags: ["Landing Page", "CRO Architecture", "Visual Hierarchy", "Direct-to-Consumer"],
+    metrics: ["6-Phase Conversion Story", "Sub-3s Hero Clarity", "Thumb-Friendly Mobile UX"],
+    accentColor: "#cbe86a",
+    review: {
+      clientGoal:
+        "Engineer an authoritative, high-velocity landing page architecture that fuses razor-sharp visual hierarchy with uncompromising conversion rates for paid traffic campaigns.",
+      techStack: ["Figma", "Conversion Rate Optimization (CRO)", "Design Systems", "Component Architecture", "Mobile UX"],
+      featuresEngineered: [
+        "Airtight 6-phase conversion narrative: Hero Value Hook → Core Capability Breakdown → Feature Deep Dive → Proof Matrix → Comparison Grid → Action Anchor",
+        "Modular benefit cards with high-contrast call-to-action components and tactile feedback states",
+        "Sub-3-second value proposition clarity positioned decisively above the fold",
+        "Thumb-accessible mobile action triggers with zero horizontal overflow",
+      ],
+      performanceImpact:
+        "Optimized full-funnel dwell time, scroll depth, and call-to-action click-through rates across active advertising campaigns.",
+      scorecard: { mobileUx: "99%", architecture: "CRO Landing Architecture", coreWebVitals: "Grade A+" },
+    },
+  },
+  {
+    title: "TWM Luxury Solutions",
+    category: "UI/UX Design",
+    type: "Luxury Landing Page & VIP Funnel",
+    liveUrl: "https://twmluxurysolutions.com/",
+    description:
+      "Bespoke digital presence and high-conversion luxury landing page crafted for TWM Luxury Solutions, articulating elite service standards, refined aesthetic exclusivity, and seamless client onboarding.",
+    mediaType: "image",
+    mediaUrl: "/portfolio-images/twm-luxury-solutions.png",
+    mediaAlt: "TWM Luxury Solutions bespoke luxury web architecture and VIP client inquiry landing page",
+    credit: "twmluxurysolutions.com · Live Site",
+    creditUrl: "https://twmluxurysolutions.com/",
+    tags: ["Luxury Web Design", "Editorial Typography", "VIP Conversion Funnel", "High-End UI"],
+    metrics: ["Bespoke Concierge Gate", "Editorial Typography", "Sub-second Luxury Flow"],
+    accentColor: "#d4af37",
+    review: {
+      clientGoal:
+        "Construct an editorial, high-performing luxury digital experience for ultra-high-net-worth clientele that marries aesthetic prestige with low-friction private inquiry flows.",
+      techStack: ["Figma", "Editorial Design System", "High-End Typographic Hierarchy", "VIP Inquiry Architecture"],
+      featuresEngineered: [
+        "Tailored 'Prestige → Capability → Assurance → Private Engagement' conversion progression",
+        "Private concierge consultation gateway replacing cluttered mass-market lead forms",
+        "Editorial typographic balance combining luxury serif headlines with crisp Swiss micro-copy",
+        "Minimalist hairline structure (1px) preserving spatial clarity and visual prestige",
+      ],
+      performanceImpact:
+        "Significantly elevated prospective client inquiry quality and established authoritative brand pedigree in the luxury advisory sector.",
+      scorecard: { mobileUx: "98%", architecture: "Bespoke Editorial Luxury", coreWebVitals: "Ultra Smooth" },
+    },
+  },
+  {
     title: "Comfrt",
     category: "Web Development",
     type: "Web Development Project",
