@@ -6,7 +6,7 @@ export const brand: BrandConfig = {
   heroTitle: "Digital work that feels",
   heroAccent: "alive.",
   heroDescription:
-    "Creative production, front-end experiences, and digital support for brands that want sharper execution without adding another layer of chaos.",
+    "Creative production, web development experiences, and digital support for brands that want sharper execution without adding another layer of chaos.",
   eyebrow: "Creative studio · Digital partner",
 } as const;
 

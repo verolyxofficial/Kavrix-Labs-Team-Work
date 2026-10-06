@@ -90,17 +90,7 @@ export default function Portfolio() {
   };
 
   const items = useMemo(() => {
-    return siteConfig.portfolio.filter((item) => {
-      const cat: string = item.category;
-      if (cat === filter) return true;
-      if (
-        (filter === "E-commerce" || filter === "Web Development") &&
-        (cat === "Web Development" || cat === "E-commerce")
-      ) {
-        return true;
-      }
-      return false;
-    });
+    return siteConfig.portfolio.filter((item) => item.category === filter);
   }, [filter]);
 
   return (

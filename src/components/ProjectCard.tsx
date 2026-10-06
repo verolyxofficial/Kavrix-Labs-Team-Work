@@ -134,7 +134,13 @@ export default function ProjectCard({ project, index, onOpenReview }: ProjectCar
                 rel="noreferrer"
                 className="card-live-link"
               >
-                <span>Visit Live</span>
+                <span>
+                  {project.liveUrl.endsWith(".pdf")
+                    ? "View PDF / Case Study"
+                    : project.liveUrl.startsWith("/portfolio-images/")
+                    ? "View Showcase"
+                    : "Visit Live"}
+                </span>
                 <ArrowUpRight size={14} />
               </a>
             ) : project.mediaType === "video" ? (
