@@ -137,6 +137,8 @@ export default function ProjectCard({ project, index, onOpenReview }: ProjectCar
                 <span>
                   {project.liveUrl.endsWith(".pdf")
                     ? "View PDF / Case Study"
+                    : /\.(webp|jpg|jpeg|png)$/i.test(project.liveUrl)
+                    ? "View Creative"
                     : project.liveUrl.startsWith("/portfolio-images/")
                     ? "View Showcase"
                     : "Visit Live"}
