@@ -984,4 +984,426 @@ export const portfolio: readonly PortfolioItem[] = [
     metrics: ["Feature Formula Badges","Night Meadow Ambiance","EV Range Clarity"],
     accentColor: "#10b981",
   },
+  {
+    title: "AEGAEON",
+    category: "AI Solutions",
+    type: "Agent Orchestration",
+    liveUrl: "https://github.com/Cyanex1702/AEGAEON-AI-Coding-Compute-Agent-Orchestrator",
+    description:
+      "Local-first AI coding and compute orchestration system that accepts software briefs, generates validated DAG task graphs, dispatches jobs across local or disposable GPU workers, and integrates verified code into canonical Git.",
+    mediaType: "image",
+    mediaUrl: "/portfolio-images/ai/aegaeon-agent-orchestrator.jpg",
+    mediaAlt: "AEGAEON — Agent Orchestration AI system architecture and interface",
+    credit: "GitHub · AEGAEON",
+    creditUrl: "https://github.com/Cyanex1702/AEGAEON-AI-Coding-Compute-Agent-Orchestrator",
+    tags: ["Agent Orchestrator","DAG Scheduler","FastAPI","Next.js","Python","Git Engine"],
+    metrics: ["EXECUTION: RICH / BROKE / DEMO","INTEGRITY: 100% PASS"],
+    accentColor: "#06b6d4",
+    review: {
+      clientGoal:
+        "Local-first AI coding and compute orchestration system that accepts software briefs, generates validated DAG task graphs, dispatches jobs across local or disposable GPU workers, and integrates verified code into canonical Git.",
+      techStack: ["Agent Orchestrator","DAG Scheduler","FastAPI","Next.js","Python","Git Engine"],
+      featuresEngineered: [
+        "Converts natural-language software briefs into validated dependency graphs (DAG) with capability-aware worker scheduling.",
+        "Dual execution paths: Controller-side OpenAI-compatible models (Rich Boy) or disposable Colab/local GPU workers (Broke Boy).",
+        "Enforces repository integrity: workers operate in isolated ephemeral directories while only the controller mutates canonical Git."
+      ],
+      performanceImpact:
+        "Full agent lifecycle orchestration with deterministic execution, ephemeral workers, and real test verification.",
+      scorecard: {
+        mobileUx: "FLAGSHIP ORCHESTRATOR",
+        architecture: "MISSION / 01 · Agent Orchestration",
+        coreWebVitals: "EXECUTION: RICH / BROKE / DEMO"
+      }
+    }
+  },
+  {
+    title: "OpenFrame",
+    category: "AI Solutions",
+    type: "Local-First Creative Studio",
+    liveUrl: "https://github.com/Cyanex1702/OpenFrame-Open-Source-Desktop-Creative-Studio-AI-Media-Editor",
+    description:
+      "An open-source desktop creative studio and multitrack video editor with native offline AI speech-to-text transcription, private media processing, and professional audio/video tools without cloud lock-in.",
+    mediaType: "image",
+    mediaUrl: "/portfolio-images/ai/openframe-creative-studio.jpg",
+    mediaAlt: "OpenFrame — Local-First Creative Studio AI system architecture and interface",
+    credit: "GitHub · OpenFrame",
+    creditUrl: "https://github.com/Cyanex1702/OpenFrame-Open-Source-Desktop-Creative-Studio-AI-Media-Editor",
+    tags: ["Tauri 2","Rust","React 19","whisper.cpp","FFmpeg","Local-First"],
+    metrics: ["MEDIA: AIR-GAPPED PRIVACY","NATIVE FFMPEG PIPELINE"],
+    accentColor: "#8b5cf6",
+    review: {
+      clientGoal:
+        "An open-source desktop creative studio and multitrack video editor with native offline AI speech-to-text transcription, private media processing, and professional audio/video tools without cloud lock-in.",
+      techStack: ["Tauri 2","Rust","React 19","whisper.cpp","FFmpeg","Local-First"],
+      featuresEngineered: [
+        "Built with React 19, TypeScript, Rust, and Tauri 2 for minimal memory footprint and native Windows execution.",
+        "Private local speech-to-text transcription powered directly on-device via whisper.cpp without third-party APIs.",
+        "Multitrack video timeline, real decoded audio waveforms, beat detection, SVG visual design workspace, and autosave recovery."
+      ],
+      performanceImpact:
+        "Native desktop performance with zero cloud upload required, air-gapped local AI, and FFmpeg media pipeline.",
+      scorecard: {
+        mobileUx: "RUST + TAURI 2 // PRIVATE AI",
+        architecture: "MISSION / 02 · Local-First Creative Studio",
+        coreWebVitals: "MEDIA: AIR-GAPPED PRIVACY"
+      }
+    }
+  },
+  {
+    title: "FashionLab AI",
+    category: "AI Solutions",
+    type: "Generative Vision & Studio",
+    liveUrl: "https://github.com/Cyanex1702/Fashionlab-AI",
+    description:
+      "Local-first, model-agnostic AI fashion infrastructure and studio for virtual try-on, clothing synthesis, photoshoots, wardrobe management, and model benchmarking across multiple hardware targets.",
+    mediaType: "image",
+    mediaUrl: "/portfolio-images/ai/fashionlab-virtual-tryon.jpg",
+    mediaAlt: "FashionLab AI — Generative Vision & Studio AI system architecture and interface",
+    credit: "GitHub · FashionLab AI",
+    creditUrl: "https://github.com/Cyanex1702/Fashionlab-AI",
+    tags: ["Virtual Try-On","Generative AI","FastAPI","Next.js","PyTorch","Plugin SDK"],
+    metrics: ["WARDROBE SUITE","ARENA BENCHMARKING"],
+    accentColor: "#ec4899",
+    review: {
+      clientGoal:
+        "Local-first, model-agnostic AI fashion infrastructure and studio for virtual try-on, clothing synthesis, photoshoots, wardrobe management, and model benchmarking across multiple hardware targets.",
+      techStack: ["Virtual Try-On","Generative AI","FastAPI","Next.js","PyTorch","Plugin SDK"],
+      featuresEngineered: [
+        "Hardware-aware execution with automatic device detection and VRAM planning for CUDA, MPS, ROCm, XPU, and CPU.",
+        "Extensible Plugin SDK 1.0 supporting pluggable model providers, conditioning controls, and image preprocessors.",
+        "Multi-surface deployment spanning Next.js studio, FastAPI endpoints, CLI, Gradio UI, and Kaggle/Colab notebooks."
+      ],
+      performanceImpact:
+        "Transforms virtual try-on research into an extensible production platform supporting CUDA, Apple MPS, and ROCm.",
+      scorecard: {
+        mobileUx: "HARDWARE-AWARE INFRASTRUCTURE",
+        architecture: "MISSION / 03 · Generative Vision & Studio",
+        coreWebVitals: "WARDROBE SUITE"
+      }
+    }
+  },
+  {
+    title: "D.R.E.A.M",
+    category: "AI Solutions",
+    type: "Diffusion & Latent Generation",
+    liveUrl: "https://huggingface.co/Cyanex/D.r.e.a.m_Mega",
+    description:
+      "Digital Rendering Engine for Artistic Melodies — a text-to-image research diffusion model engineered for controllable visual generation, prompt adherence, and stylistic nuance.",
+    mediaType: "image",
+    mediaUrl: "/portfolio-images/ai/dream-diffusion-system.jpg",
+    mediaAlt: "D.R.E.A.M — Diffusion & Latent Generation AI system architecture and interface",
+    credit: "Hugging Face · D.R.E.A.M",
+    creditUrl: "https://huggingface.co/Cyanex/D.r.e.a.m_Mega",
+    tags: ["Diffusion Models","Text-to-Image","Hugging Face","LoRA","1st Place Award"],
+    metrics: ["HUGGING FACE MODEL HUB","D.R.E.A.M_MEGA CHECKPOINT"],
+    accentColor: "#3b82f6",
+    review: {
+      clientGoal:
+        "Digital Rendering Engine for Artistic Melodies — a text-to-image research diffusion model engineered for controllable visual generation, prompt adherence, and stylistic nuance.",
+      techStack: ["Diffusion Models","Text-to-Image","Hugging Face","LoRA","1st Place Award"],
+      featuresEngineered: [
+        "Engineered end-to-end prompt-to-image latent diffusion workflow with custom fine-tuning and LoRA weight adaptation.",
+        "Shipped both standard and high-capacity Mega model checkpoints directly to the Hugging Face model ecosystem.",
+        "Benchmarked against complex prompt compositions to maximize conceptual adherence and visual fidelity."
+      ],
+      performanceImpact:
+        "Awarded 1st place at an AI exhibition; published model weights and demos on Hugging Face Hub.",
+      scorecard: {
+        mobileUx: "1ST PLACE EXHIBITION WINNER",
+        architecture: "MISSION / 04 · Diffusion & Latent Generation",
+        coreWebVitals: "HUGGING FACE MODEL HUB"
+      }
+    }
+  },
+  {
+    title: "Modern RAG Lab",
+    category: "AI Solutions",
+    type: "Retrieval & Knowledge Systems",
+    liveUrl: "https://github.com/Cyanex1702/Modern-RAG-Lab",
+    description:
+      "A modular, local-first Python workbench for building, inspecting, testing, and visualizing production-grade Retrieval-Augmented Generation architectures with hardened document ingestion.",
+    mediaType: "image",
+    mediaUrl: "/portfolio-images/ai/modern-rag-lab.jpg",
+    mediaAlt: "Modern RAG Lab — Retrieval & Knowledge Systems AI system architecture and interface",
+    credit: "GitHub · Modern RAG Lab",
+    creditUrl: "https://github.com/Cyanex1702/Modern-RAG-Lab",
+    tags: ["RAG","Qdrant","Sentence Transformers","BM25","FastAPI","Gradio"],
+    metrics: ["LOCAL-FIRST BENCH","GRADIO + FASTAPI + CLI"],
+    accentColor: "#10b981",
+    review: {
+      clientGoal:
+        "A modular, local-first Python workbench for building, inspecting, testing, and visualizing production-grade Retrieval-Augmented Generation architectures with hardened document ingestion.",
+      techStack: ["RAG","Qdrant","Sentence Transformers","BM25","FastAPI","Gradio"],
+      featuresEngineered: [
+        "Multi-engine retrieval combining dense Sentence Transformers embeddings, BM25 sparse lexical search, and RRF fusion.",
+        "Continuous PDF chunking across physical page breaks with page-range citations and model-window safety clamping.",
+        "Unified codebase serving Typer CLI, Gradio interface, FastAPI service, and Jupyter notebook exploration."
+      ],
+      performanceImpact:
+        "Continuous PDF chunking, dense/sparse hybrid search, and deterministic retrieval evaluation in one local tool.",
+      scorecard: {
+        mobileUx: "HYBRID RETRIEVAL WORKBENCH",
+        architecture: "MISSION / 05 · Retrieval & Knowledge Systems",
+        coreWebVitals: "LOCAL-FIRST BENCH"
+      }
+    }
+  },
+  {
+    title: "MediaSensei",
+    category: "AI Solutions",
+    type: "Multi-Modal Data Engineering",
+    liveUrl: "https://github.com/Cyanex1702/MediaSensei",
+    description:
+      "All-in-one local-first media dataset processing and curation workbench. Handles images, audio/video, documents, and structured tables with 35+ batch operations and persistent background workers.",
+    mediaType: "image",
+    mediaUrl: "/portfolio-images/ai/mediasensei-data-engine.jpg",
+    mediaAlt: "MediaSensei — Multi-Modal Data Engineering AI system architecture and interface",
+    credit: "GitHub · MediaSensei",
+    creditUrl: "https://github.com/Cyanex1702/MediaSensei",
+    tags: ["Data Engineering","DuckDB","FastAPI","Whisper","OCR","Parquet"],
+    metrics: ["LINK: READY"],
+    accentColor: "#f59e0b",
+    review: {
+      clientGoal:
+        "All-in-one local-first media dataset processing and curation workbench. Handles images, audio/video, documents, and structured tables with 35+ batch operations and persistent background workers.",
+      techStack: ["Data Engineering","DuckDB","FastAPI","Whisper","OCR","Parquet"],
+      featuresEngineered: [
+        "DuckDB-powered analytical queries and Parquet transformations for tables up to 200,000 rows.",
+        "Dedicated image, video, audio, knowledge, and quality laboratories with persistent background worker queue.",
+        "Integrated OCR (Tesseract + Windows inbox fallback) and on-device whisper.cpp audio transcription."
+      ],
+      performanceImpact:
+        "Automates repeatable dataset acquisition, cleaning, annotation, OCR, and Parquet exports with zero data leakage.",
+      scorecard: {
+        mobileUx: "DUCKDB + PERSISTENT ENGINE",
+        architecture: "MISSION / 06 · Multi-Modal Data Engineering",
+        coreWebVitals: "LINK: READY"
+      }
+    }
+  },
+  {
+    title: "Oceanic Life Dataset",
+    category: "AI Solutions",
+    type: "Computer Vision Dataset",
+    liveUrl: "https://www.kaggle.com/datasets/cyanex1702/oceanic-life-dataset",
+    description:
+      "A curated marine-life image dataset comprising 7,990+ high-quality images for classification, object detection, and underwater conservation research.",
+    mediaType: "image",
+    mediaUrl: "/portfolio-images/ai/oceanic-life-dataset.jpg",
+    mediaAlt: "Oceanic Life Dataset — Computer Vision Dataset AI project card and specification",
+    credit: "Kaggle Dataset · Oceanic Life Dataset",
+    creditUrl: "https://www.kaggle.com/datasets/cyanex1702/oceanic-life-dataset",
+    tags: ["Kaggle","Dataset Curation","Computer Vision"],
+    metrics: ["Computer Vision Dataset","ARCHIVE / 07"],
+    accentColor: "#0284c7",
+    review: {
+      clientGoal:
+        "A curated marine-life image dataset comprising 7,990+ high-quality images for classification, object detection, and underwater conservation research.",
+      techStack: ["Kaggle","Dataset Curation","Computer Vision"],
+      featuresEngineered: [
+        "Published on Kaggle with legacy expert status and citations in peer-reviewed computer vision literature.",
+        "Verified open-source AI asset hosted on Kaggle."
+      ],
+      performanceImpact:
+        "Published on Kaggle with legacy expert status and citations in peer-reviewed computer vision literature.",
+      scorecard: {
+        mobileUx: "ARCHIVE / 07",
+        architecture: "Computer Vision Dataset",
+        coreWebVitals: "Production Ready"
+      }
+    }
+  },
+  {
+    title: "BioGPT-X & Language Suite",
+    category: "AI Solutions",
+    type: "Open Language Models",
+    liveUrl: "https://huggingface.co/Cyanex",
+    description:
+      "Open biomedical and fine-tuned text generation models on Hugging Face: BioGPT-X for biomedical reasoning, PY-8b (3B parameter LLM), and Reme (83.5M lightweight model).",
+    mediaType: "image",
+    mediaUrl: "/portfolio-images/ai/biogpt-language-suite.jpg",
+    mediaAlt: "BioGPT-X & Language Suite — Open Language Models AI project card and specification",
+    credit: "Hugging Face Model · BioGPT-X & Language Suite",
+    creditUrl: "https://huggingface.co/Cyanex",
+    tags: ["Hugging Face","LLMs","Fine-Tuning"],
+    metrics: ["Open Language Models","ARCHIVE / 08"],
+    accentColor: "#14b8a6",
+    review: {
+      clientGoal:
+        "Open biomedical and fine-tuned text generation models on Hugging Face: BioGPT-X for biomedical reasoning, PY-8b (3B parameter LLM), and Reme (83.5M lightweight model).",
+      techStack: ["Hugging Face","LLMs","Fine-Tuning"],
+      featuresEngineered: [
+        "Parameter-efficient adaptation, domain fine-tuning, and edge-friendly model checkpoints.",
+        "Verified open-source AI asset hosted on Hugging Face."
+      ],
+      performanceImpact:
+        "Parameter-efficient adaptation, domain fine-tuning, and edge-friendly model checkpoints.",
+      scorecard: {
+        mobileUx: "ARCHIVE / 08",
+        architecture: "Open Language Models",
+        coreWebVitals: "Production Ready"
+      }
+    }
+  },
+  {
+    title: "Drug-Target Intelligence",
+    category: "AI Solutions",
+    type: "Molecular Graph AI",
+    liveUrl: "https://github.com/Cyanex1702",
+    description:
+      "A hybrid prediction approach combining Graph Neural Networks (GNNs) for molecular representation with retrieval and LLM reasoning for interpretable biochemical analysis.",
+    mediaType: "image",
+    mediaUrl: "/portfolio-images/ai/drug-target-intelligence.jpg",
+    mediaAlt: "Drug-Target Intelligence — Molecular Graph AI AI project card and specification",
+    credit: "GitHub Repository · Drug-Target Intelligence",
+    creditUrl: "https://github.com/Cyanex1702",
+    tags: ["GNNs","RAG","LLMs"],
+    metrics: ["Molecular Graph AI","ARCHIVE / 09"],
+    accentColor: "#6366f1",
+    review: {
+      clientGoal:
+        "A hybrid prediction approach combining Graph Neural Networks (GNNs) for molecular representation with retrieval and LLM reasoning for interpretable biochemical analysis.",
+      techStack: ["GNNs","RAG","LLMs"],
+      featuresEngineered: [
+        "Unifies structural graph signals with grounded knowledge retrieval for explainable predictions.",
+        "Verified open-source AI asset hosted on GitHub."
+      ],
+      performanceImpact:
+        "Unifies structural graph signals with grounded knowledge retrieval for explainable predictions.",
+      scorecard: {
+        mobileUx: "ARCHIVE / 09",
+        architecture: "Molecular Graph AI",
+        coreWebVitals: "Production Ready"
+      }
+    }
+  },
+  {
+    title: "Omni Media Player",
+    category: "AI Solutions",
+    type: "Android Application",
+    liveUrl: "https://github.com/Cyanex1702/Omni-Media-Player_And_Downloader-for-Android",
+    description:
+      "An open-source Android media player and downloader built with Kotlin that integrates playback queues, media indexing, and yt-dlp-powered acquisition into a sleek mobile app.",
+    mediaType: "image",
+    mediaUrl: "/portfolio-images/ai/omni-media-player.jpg",
+    mediaAlt: "Omni Media Player — Android Application AI project card and specification",
+    credit: "GitHub Repository · Omni Media Player",
+    creditUrl: "https://github.com/Cyanex1702/Omni-Media-Player_And_Downloader-for-Android",
+    tags: ["Android","Kotlin","yt-dlp"],
+    metrics: ["Android Application","ARCHIVE / 10"],
+    accentColor: "#f97316",
+    review: {
+      clientGoal:
+        "An open-source Android media player and downloader built with Kotlin that integrates playback queues, media indexing, and yt-dlp-powered acquisition into a sleek mobile app.",
+      techStack: ["Android","Kotlin","yt-dlp"],
+      featuresEngineered: [
+        "Complete mobile product spanning custom Android UI, background playback, and media workflows.",
+        "Verified open-source AI asset hosted on GitHub."
+      ],
+      performanceImpact:
+        "Complete mobile product spanning custom Android UI, background playback, and media workflows.",
+      scorecard: {
+        mobileUx: "ARCHIVE / 10",
+        architecture: "Android Application",
+        coreWebVitals: "Production Ready"
+      }
+    }
+  },
+  {
+    title: "Federal Bureau of Framing",
+    category: "AI Solutions",
+    type: "Data Quality Toolkit",
+    liveUrl: "https://github.com/Cyanex1702/Federal_Bureau_Of_Framing",
+    description:
+      "Product image scraping, automated visual audit, and normalization toolkit for cleaning e-commerce datasets and vision pipelines.",
+    mediaType: "image",
+    mediaUrl: "/portfolio-images/ai/federal-bureau-of-framing.jpg",
+    mediaAlt: "Federal Bureau of Framing — Data Quality Toolkit AI project card and specification",
+    credit: "GitHub Repository · Federal Bureau of Framing",
+    creditUrl: "https://github.com/Cyanex1702/Federal_Bureau_Of_Framing",
+    tags: ["Python","Computer Vision","Data Cleaning"],
+    metrics: ["Data Quality Toolkit","ARCHIVE / 11"],
+    accentColor: "#84cc16",
+    review: {
+      clientGoal:
+        "Product image scraping, automated visual audit, and normalization toolkit for cleaning e-commerce datasets and vision pipelines.",
+      techStack: ["Python","Computer Vision","Data Cleaning"],
+      featuresEngineered: [
+        "Automates perceptual deduplication, text-containment elimination, and canvas standardization.",
+        "Verified open-source AI asset hosted on GitHub."
+      ],
+      performanceImpact:
+        "Automates perceptual deduplication, text-containment elimination, and canvas standardization.",
+      scorecard: {
+        mobileUx: "ARCHIVE / 11",
+        architecture: "Data Quality Toolkit",
+        coreWebVitals: "Production Ready"
+      }
+    }
+  },
+  {
+    title: "Nightfall Paradox",
+    category: "AI Solutions",
+    type: "Interactive 3D Craft",
+    liveUrl: "https://www.coregames.com/games/7829f2/nightfall-paradox",
+    description:
+      "An indie game collaboration spanning gameplay programming, shader authoring, and optimized 3D asset production in Core Games.",
+    mediaType: "image",
+    mediaUrl: "/portfolio-images/ai/nightfall-paradox-3d.jpg",
+    mediaAlt: "Nightfall Paradox — Interactive 3D Craft AI project card and specification",
+    credit: "Core Games Playable · Nightfall Paradox",
+    creditUrl: "https://www.coregames.com/games/7829f2/nightfall-paradox",
+    tags: ["Game Development","3D Art","Core Games"],
+    metrics: ["Interactive 3D Craft","ARCHIVE / 12"],
+    accentColor: "#a855f7",
+    review: {
+      clientGoal:
+        "An indie game collaboration spanning gameplay programming, shader authoring, and optimized 3D asset production in Core Games.",
+      techStack: ["Game Development","3D Art","Core Games"],
+      featuresEngineered: [
+        "Published playable experience connecting technical art with real-time interactive game systems.",
+        "Verified open-source AI asset hosted on GitHub."
+      ],
+      performanceImpact:
+        "Published playable experience connecting technical art with real-time interactive game systems.",
+      scorecard: {
+        mobileUx: "ARCHIVE / 12",
+        architecture: "Interactive 3D Craft",
+        coreWebVitals: "Production Ready"
+      }
+    }
+  },
+  {
+    title: "DreamScape & LoRA Training",
+    category: "AI Solutions",
+    type: "Generative AI Notebooks",
+    liveUrl: "https://www.kaggle.com/cyanex1702",
+    description:
+      "Diffusion prompt-image pairs dataset for generative fine-tuning alongside practical Kaggle notebooks for LoRA adaptation using KohyaSS.",
+    mediaType: "image",
+    mediaUrl: "/portfolio-images/ai/dreamscape-lora-training.jpg",
+    mediaAlt: "DreamScape & LoRA Training — Generative AI Notebooks AI project card and specification",
+    credit: "Kaggle Dataset · DreamScape & LoRA Training",
+    creditUrl: "https://www.kaggle.com/cyanex1702",
+    tags: ["Kaggle","LoRA","Stable Diffusion"],
+    metrics: ["Generative AI Notebooks","ARCHIVE / 13"],
+    accentColor: "#e11d48",
+    review: {
+      clientGoal:
+        "Diffusion prompt-image pairs dataset for generative fine-tuning alongside practical Kaggle notebooks for LoRA adaptation using KohyaSS.",
+      techStack: ["Kaggle","LoRA","Stable Diffusion"],
+      featuresEngineered: [
+        "Published open-source guides and datasets empowering community diffusion model training.",
+        "Verified open-source AI asset hosted on Kaggle."
+      ],
+      performanceImpact:
+        "Published open-source guides and datasets empowering community diffusion model training.",
+      scorecard: {
+        mobileUx: "ARCHIVE / 13",
+        architecture: "Generative AI Notebooks",
+        coreWebVitals: "Production Ready"
+      }
+    }
+  },
 ] as const;

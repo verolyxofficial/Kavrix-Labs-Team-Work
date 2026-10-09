@@ -141,6 +141,14 @@ export default function ProjectCard({ project, index, onOpenReview }: ProjectCar
                     ? "View Creative"
                     : project.liveUrl.startsWith("/portfolio-images/")
                     ? "View Showcase"
+                    : project.liveUrl.includes("github.com")
+                    ? "GitHub Repo"
+                    : project.liveUrl.includes("huggingface.co")
+                    ? "Hugging Face"
+                    : project.liveUrl.includes("kaggle.com")
+                    ? "Kaggle Dataset"
+                    : project.liveUrl.includes("coregames.com")
+                    ? "Play Game"
                     : "Visit Live"}
                 </span>
                 <ArrowUpRight size={14} />
